@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+    <head>
+        <title> Latihan - Mohlis </title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+    </head>
+
+    <body>
+    <header class="header-container">
+        <section class="logo-icon"></section>
+        <section class="judul" id="judul"><h3>Madura Travel</h3></section>
+        <section class="nav-container">
+            <button>Beranda</button>
+            <button><a href="#paket">Paket Tour</a></button>
+            <button><a href="#bulat">Pemandu</a></button>
+            <button><a href="#footer">Kontak</a></button>
+        </section>
+    </header>
+    <hr />
+
+    <section class="section-container">
+        <header>
+            <h1 style="color: orange;"><u>MADURA </u><font color="white"><u>TOUR GUIDE</u></font></h1>
+            <h3 style="color: yellow;">Paket 1 Day Tour <font color="lime">Wisata Pantai Jumiang</font><font color="white"> by MotorCycle</font><font color="orange"> Rp.250.000</font></h3>
+        </header>
+
+        <div class="section-content-container">
+            <!-- Ini konten Slide Banner -->
+            <div class="kiri" style="height: auto; width: 100%; background-color: darkgrey;">
+                <h2 class="w3-center">Panorama Pantai Jumiang</h2>
+                <div class="slideimg" style="max-width:100%;">
+                    <img id="img1" class="mySlides" src="img/img1.jpg" style="width:100%">
+                    <img id="img2" class="mySlides" src="img/img2.jpg" style="width:100%">
+                    <img id="img3" class="mySlides" src="img/img3.jpg" style="width:100%">
+                    <img id="img4" class="mySlides" src="img/img4.jpg" style="width:100%">
+                    <img id="img5" class="mySlides" src="img/img5.jpg" style="width:100%">
+                </div>
+            </div>
+            <!-- Ini konten form -->
+            <div class="kanan" style="height: auto; width: 60%; background-color: darkcyan;">
+                <form name="Form" onsubmit="return validateForm()" >
+                    <h2 style="text-align: center;">Formulir Registrasi</h2>
+                    <p>Jika berminat jasa tour kami silahkan isi data anda di bawah ini, silahkan kontak kami jika tidak segera di konfirmasi</p>
+                    <div class="box">
+                        <label>Nama Lengkap</label>
+                        <input type="text" name="name" id="name">
+                        <div class="error" id="nameErr"></div>
+                    </div>
+                    <div class="box">
+                        <label>Alamat Email</label>
+                        <input type="text" name="email" id="email">
+                        <div class="error" id="emailErr"></div>
+                    </div>
+                    <div class="box">
+                        <label>Nomor HP / WA</label>
+                        <input type="text" name="mobile" maxlength="14" id="mobile">
+                        <div class="error" id="mobileErr"></div>
+                    </div>
+                    <div class="box">
+                        <label>Pilih Paket Tour</label>
+                        <select name="country" id="country">
+                            <option>Select</option>
+                            <option>Paket 1 Lokasi</option>
+                            <option>Paket 2 Lokasi</option>
+                            <option>Paket 3 Lokasi</option>
+                            <option>Paket 4 Lokasi</option>
+                        </select> 
+                        <div class="error" id="countryErr"></div>
+                    </div>
+                    <div class="box">
+                        <label>Jenis Kelamin</label>
+                        <div class="form-inline" id="gender">
+                            <label><input type="radio" name="gender" value="male"> Perempuan</label>
+                            <label><input type="radio" name="gender" value="female"> Laki-laki</label> 
+                        </div>
+                        <div class="error" id="genderErr"></div>
+                    </div>
+                          
+                    <div class="box">
+                        <input type="submit" value="KIRIM DATA">
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+
+<!-- halaman paket tour -->
+        <div class="paket" id="paket" style="height: 300px; width: 100%; overflow-x: auto;">
+            <p><h1><b>PAKET TOUR MADURA TRAVEL :</b></h1></p>
+            <table border="1" align="center" cellpadding="8">
+                <tr style="background-color: green;">
+                    <td>NO</td><td>PAKET</td><td>LOKASI DESTINASI</td><td>TRANSPORTASI</td><td>KISARAN HARGA</td>
+                </tr>
+                <tr style="background-color: black;">
+                    <td>1</td><td>1 lokasi</td><td>Pantai Jumiang</td><td>Mobil/Motor</td><td>Rp.250.000 - Rp.500.000</td>
+                </tr>
+                <tr style="background-color: red;">
+                    <td>2</td><td>2 lokasi</td><td>Pantai Jumiang + Pantai Talang Siring</td><td>Mobil/Motor</td><td>Rp.500.000 - Rp.750.000</td>
+                </tr>
+                <tr style="background-color: black">
+                    <td>3</td><td>3 lokasi</td><td>Pantai Jumiang + Pantai Talang Siring + Pilihan</td><td>Mobil/Motor</td><td>Rp.750.000 - Rp.1.000.000</td>
+                </tr>
+                <tr style="background-color: red;">
+                    <td>4</td><td>4 lokasi</td><td>Pantai Jumiang + Pantai Talang Siring + 2 Pilihan</td><td>Mobil/Motor</td><td>Rp.1.000.000 - Rp.1.500.000</td>
+                </tr>
+            </table>
+        </div><br /><br />
+
+<!-- tampilan tab fasilitas -->
+        <center>
+            <p><h3> Fasilitas dan Layanan tempat destinasi, klik tab menu di bawah ini :</h3></p>
+        </center>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, '1')">Tempat Destinasi</button>
+            <button class="tablinks" onclick="openCity(event, '2')">Transportasi</button>
+            <button class="tablinks" onclick="openCity(event, '3')">Makanan & Minuman</button>
+            <button class="tablinks" onclick="openCity(event, '4')">Musholla & Kamar Mandi</button>
+            <button class="tablinks" onclick="openCity(event, '5')">Spot Wisata</button>
+        </div>
+
+        <div id="1" class="tabcontent">
+            <h3>Lokasi Wisata Pantai Jumiang</h3>
+            <p>Pantai Jumiang adalah tempat wisata yang sering di kunjungi oleh para wisatawan, terutama oleh wisatawan lokal.
+                Lokasinya berada di Dusun Jumiang, Desa Tanjung, Kecamatan Pademawu, Kabupaten Pamekasan Pulau Madura Prov.JawaTimur.</p>
+            <p>Wisata ini terbagi menjadi 3 lokasi yaitu bagian barat (Pantai), tengah (tebing) dan timur (bujuk/astah/tapak tilas). </p>
+        </div>
+
+        <div id="2" class="tabcontent">
+            <h3>Transportasi Wisata Pantai Jumiang</h3>
+            <p>Untuk transportasi yang bisa/sering masuk ke kawasan Wisata Pantai Jumiang, yaitu sepeda motor, mobil, bus, odong-odong,
+                bahkan kadang kuda juga sering ada. Untuk jalur laut misalkan perahu anda bisa langsung masuk di kawasan Pantai yang di sebelah barat</p> 
+        </div>
+
+        <div id="3" class="tabcontent">
+            <h3>Kuliner (Makanan & Minuman) Wisata Pantai Jumiang</h3>
+            <p>Anda tidak perlu hawatir takut kelaparan jika berkunjung ke Wisata Pantai Jumiang ini, karena di sana sudah tersedia warung jualan Makanan
+                khas kuliner penduduk lokal sana. Yang warung-warung tersebut berjejer di daerah pantai sebelah barat dan juga di daerah sebelah timur bujuk.</p>
+        </div>
+
+        <div id="4" class="tabcontent">
+            <h3>Musholla & Kamar mandi</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="5" class="tabcontent">
+            <h3>Spot-spot Wisata Pantai Jumiang</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <br /><br/>
+
+        <!-- tampilan profil guide -->
+        <div class="bujang">
+            <div class="panjang">
+                <div class="bulat" id="bulat">
+                </div>
+                <div class="panjang2">
+                    Pemandu 1 <br />
+                    Nama : Mohammad Mohlis <br />
+                    Bahasa : Bahasa Madura, Bahasa Indoneisa <br />
+                </div>
+            </div>
+
+            <div class="panjang">
+                <div class="bulat" id="bulat">
+                </div>
+                <div class="panjang2">
+                    Pemandu 2 <br />
+                    Nama : Mohammad Norhadi <br />
+                    Bahasa : Bahasa Madura, Bahasa Indoneisa, Bahasa Inggris <br />
+                </div>
+            </div>
+        </div><br/>
+        <div class="bujang">
+            <div class="panjang">
+                <div class="bulat" id="bulat">
+                </div>
+                <div class="panjang2">
+                    Pemandu 3 <br />
+                    Nama : Mohammad Mohlis <br />
+                    Bahasa : Bahasa Madura, Bahasa Indoneisa <br />
+                </div>
+            </div>
+
+            <div class="panjang">
+                <div class="bulat" id="bulat">
+                </div>
+                <div class="panjang2">
+                    Pemandu 4 <br />
+                    Nama : Mohammad Norhadi <br />
+                    Bahasa : Bahasa Madura, Bahasa Indoneisa, Bahasa Inggris <br />
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <!-- tampilan tab tempat wisata -->
+        <center><font color="yellow"> 
+            <p><h3> Beberapa destinasi Wisata di daerah Kabupaten/Kota Pamekasan :</h3></p></font>
+        </center>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'a')">Api tak kunjung padam</button>
+            <button class="tablinks" onclick="openCity(event, 'b')">Toron Samalem</button>
+            <button class="tablinks" onclick="openCity(event, 'c')">Monomen Arek Lancor</button>
+            <button class="tablinks" onclick="openCity(event, 'd')">Goa Blaban</button>
+            <button class="tablinks" onclick="openCity(event, 'e')">Air Terjun Ahatan</button>
+        </div>
+
+        <div id="a" class="tabcontent">
+            <h3>Lokasi Wisata Pantai Jumiang</h3>
+            <p>Pantai Jumiang adalah tempat wisata yang sering di kunjungi oleh para wisatawan, terutama oleh wisatawan lokal.
+                Lokasinya berada di Dusun Jumiang, Desa Tanjung, Kecamatan Pademawu, Kabupaten Pamekasan Pulau Madura Prov.JawaTimur.</p>
+            <p>Wisata ini terbagi menjadi 3 lokasi yaitu bagian barat (Pantai), tengah (tebing) dan timur (bujuk/astah/tapak tilas). </p>
+        </div>
+
+        <div id="b" class="tabcontent">
+            <h3>Transportasi Wisata Pantai Jumiang</h3>
+            <p>Untuk transportasi yang bisa/sering masuk ke kawasan Wisata Pantai Jumiang, yaitu sepeda motor, mobil, bus, odong-odong,
+                bahkan kadang kuda juga sering ada. Untuk jalur laut misalkan perahu anda bisa langsung masuk di kawasan Pantai yang di sebelah barat</p> 
+        </div>
+
+        <div id="c" class="tabcontent">
+            <h3>Kuliner (Makanan & Minuman) Wisata Pantai Jumiang</h3>
+            <p>Anda tidak perlu hawatir takut kelaparan jika berkunjung ke Wisata Pantai Jumiang ini, karena di sana sudah tersedia warung jualan Makanan
+                khas kuliner penduduk lokal sana. Yang warung-warung tersebut berjejer di daerah pantai sebelah barat dan juga di daerah sebelah timur bujuk.</p>
+        </div>
+
+        <div id="d" class="tabcontent">
+            <h3>Musholla & Kamar mandi</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="e" class="tabcontent">
+            <h3>Spot-spot Wisata Pantai Jumiang</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <br />
+
+<!-- footer -->
+        <footer class="footer-container" id="footer" style="overflow-x: auto;">
+            <label> <font color="yellow">Kontak Person :</font></label>
+            <table border="0" align="center">
+                <tr>
+                    <td><h5><img src="asset/whatsap.png" height="30px" width="30px"></h5></td><td><h5>WhatsApp <td>|</td></h5></td>
+                    <td><h5><img src="asset/telegram.png" height="30px" width="30px"></h5></td><td><h5>Telegram <td>|</td></h5></td>
+                    <td><h5><img src="asset/youtube.png" height="30px" width="30px"></h5></td><td><h5>Youtube <td>|</td></h5></td>
+                    <td><h5><img src="asset/instagram.png" height="30px" width="30px"></h5></td><td><h5>Instagram </h5></td>
+                </tr>
+            </table>
+        </footer>
+    </section>
+
+<!-- js fungsi untuk tab -->
+    <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+
+<!-- code js slide img -->
+    <script>
+        var myIndex = 0;
+        carousel();
+    </script>
+
+<!-- copyright pembuat -->
+<div class="cr" id="cr" style="text-align: center;">Copyright &copy; 2024 by Madura Creator</div>
+</body>
+</html>

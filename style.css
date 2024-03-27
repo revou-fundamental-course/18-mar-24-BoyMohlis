@@ -1,0 +1,245 @@
+.header-container {
+    border: 0px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: orangered;
+}
+
+.container {
+    border: 1px solid;
+}
+
+hr {
+    margin: 0px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    border-color: yellow;
+    border-radius: 50%;
+    background-image: url('../asset/logo.png');
+}
+
+.judul {
+    position: absolute;
+    padding-left: 58px;
+    color: aliceblue;
+}
+
+.nav-container>button {
+    height: 25px;
+}
+
+.section-container {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.section-container>header {
+    text-align: center;
+    color: aliceblue;
+}
+
+.section-content-container {
+    display: flex;
+}
+
+.kiri {
+    border-radius: 5%;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.kanan {
+    border-radius: 5%;
+    margin-left: 10px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.paket {
+    border: 1px solid;
+    border-color: white;
+    border-radius: 0%;
+    margin-top: 15px;
+    text-align: center;
+    background-color: maroon;
+}
+
+.footer-container {
+    background-color:brown;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: darkcyan;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  /* Create an active/current tablink class */
+.tab button.active {
+    background-color:orangered;
+  }
+
+/* Create an active/current tablink class */
+.tab button:hover {
+    background-color: wheat;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+/* css form */
+label {
+    display: block;
+    margin-bottom: 5px
+}
+label i {
+    color: #999;
+    font-size: 80%;
+}
+input, select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #a9bae64a;
+}
+.box {
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+.form-inline label, .form-inline input {
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+.error {
+    color: red;
+    font-size: 90%;
+}
+input[type=text]{
+        outline: none;
+}
+
+input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #ef6e58;
+    border-color: #ef6e58;
+    box-shadow: 0 3px 0 #bd432e;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #bd432e;
+    border-color: #bd432e;
+}
+
+.input-1{
+    background-image: url(../asset/check.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    border:1px solid #01cc40;
+}
+.input-2{
+    background-image: url(../asset/cancel.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    border:1px solid red;
+}
+.input-3{
+    border:1px solid #01cc40!important;
+}
+select{
+    outline: none!important;
+}
+.input-4{
+    border:1px solid red;
+}
+
+/* slide img */
+.mySlides {
+    display:none;
+}
+
+.slideimg {
+    padding-left:5%;
+    padding-right: 5%;
+}
+
+/*  bagian profil guide  */
+.bujang {
+    display: flex;
+    height: 100px;
+}
+
+.bulat {
+    position: absolute;
+    float: left;
+    border: 1px solid;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border-color:yellow;
+    background-color: brown;
+}
+
+.panjang {
+    border-radius: 0%;
+    height: 100%;
+    width: 50%;
+}
+
+.panjang2 {
+    float: right;
+    border-radius: 0%;
+    height: 100%;
+    width: 90%;
+    text-align: center;
+    background-color:#a9bae64a;
+}
