@@ -66,7 +66,6 @@ function validateForm() {
             elem.classList.add("input-2");
             elem.classList.remove("input-1");
     } else {
-        //var regex = /^\d+$/;
         var regex = /^(\+62|62|0)8[1-9][0-9]{6,9}$/;
         if(regex.test(mobile) === false) {
             printError("mobileErr", "Nomor HP/WA tidak benar");
